@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Закрита підпрограма (функція) обчислення y за варіантом 2 */
+// варіант номер  2 //
 double calc_y(double x) {
     if (x < 4.0) {
         double sum = 0.0;
@@ -18,13 +18,12 @@ int main(void) {
     double end = 6.0;
     double step = 0.2;
 
-    printf("    x    |       y\n");
-    printf("---------------------\n");
+    printf("    x           y\n");
 
-    /* + 1e-9 додано, щоб через похибку дробових чисел не пропустити x = 6.0 */
+    // + 1e-9 додано, щоб через похибку дробових чисел не пропустити x = 6.0 //
     for (double x = start; x <= end + 1e-9; x += step) {
         double y = calc_y(x);
-        printf("%8.2f | %10.4f\n", x, y);
+        printf("%8.2f  %10.4f\n", x, y);
     }
 
     return 0;
